@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Calculator Container -->
+    <div class="calculator">
+        <!-- Display Screen -->
+        <div class="display">
+            <input type="text" id="display" readonly placeholder="0">
+        </div>
+        
+        <!-- Calculator Buttons -->
+        <div class="buttons">
+            <!-- Row 1: Clear, Delete, Divide -->
+            <button class="btn clear" onclick="clearAll()">C</button>
+            <button class="btn operator" onclick="deleteLast()">⌫</button>
+            <button class="btn operator" onclick="addToDisplay('/')">/</button>
+            <button class="btn operator" onclick="addToDisplay('*')">×</button>
+            
+            <!-- Row 2: 7, 8, 9, Minus -->
+            <button class="btn number" onclick="addToDisplay('7')">7</button>
+            <button class="btn number" onclick="addToDisplay('8')">8</button>
+            <button class="btn number" onclick="addToDisplay('9')">9</button>
+            <button class="btn operator" onclick="addToDisplay('-')">-</button>
+            
+            <!-- Row 3: 4, 5, 6, Plus -->
+            <button class="btn number" onclick="addToDisplay('4')">4</button>
+            <button class="btn number" onclick="addToDisplay('5')">5</button>
+            <button class="btn number" onclick="addToDisplay('6')">6</button>
+            <button class="btn operator" onclick="addToDisplay('+')">+</button>
+            
+            <!-- Row 4: 1, 2, 3, Equals (spans 2 rows) -->
+            <button class="btn number" onclick="addToDisplay('1')">1</button>
+            <button class="btn number" onclick="addToDisplay('2')">2</button>
+            <button class="btn number" onclick="addToDisplay('3')">3</button>
+            <button class="btn equals" onclick="calculate()">=</button>
+            
+            <!-- Row 5: 0 (spans 2 columns), Decimal Point -->
+            <button class="btn number zero" onclick="addToDisplay('0')">0</button>
+            <button class="btn number" onclick="addToDisplay('.')">.</button>
+        </div>
+    </div>
+
+    <script>
+        // Get the display element
+        let display = document.getElementById('display');
+        
+        // Function to add numbers/operators to display
+        function addToDisplay(value) {
+            if (display.value === '0' || display.value === 'Error') {
+                display.value = value;
+            } else {
+                display.value += value;
+            }
+        }
+        
+        // Function to clear everything
+        function clearAll() {
+            display.value = '0';
+        }
+        
+        // Function to delete last character
+        function deleteLast() {
+            if (display.value.length > 1) {
+                display.value = display.value.slice(0, -1);
+            } else {
+                display.value = '0';
+            }
+        }
+        
+        // Function to calculate result
+        function calculate() {
+            try {
+                // Replace × with * for calculation
+                let expression = display.value.replace(/×/g, '*');
+                let result = eval(expression);
+                display.value = result;
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>
