@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.calculator {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Display screen styling */
+.display {
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    border: none;
+    border-radius: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 20px;
+    outline: none;
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button container - 4 columns grid */
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+/* Basic button styling */
+.btn {
+    height: 55px;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Number buttons (0-9 and decimal point) */
+.btn.number {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn.number:hover {
+    background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);
+}
+
+/* Operator buttons (+, -, ×, ÷) */
+.btn.operator {
+    background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn.operator:hover {
+    background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+}
+
+/* Clear button */
+.btn.clear {
+    background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn.clear:hover {
+    background: linear-gradient(135deg, #e17055 0%, #fdcb6e 100%);
+}
+
+/* Equals button - spans 2 rows */
+.btn.equals {
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    color: white;
+    grid-row: span 2;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    height: 122px;
+}
+
+.btn.equals:hover {
+    background: linear-gradient(135deg, #00cec9 0%, #00b894 100%);
+}
+
+/* Zero button - spans 2 columns */
+.btn.zero {
+    grid-column: span 2;
+}
+
+/* Make it mobile friendly */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .btn {
+        height: 50px;
+        font-size: 18px;
+    }
+    
+    #display {
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .btn.equals {
+        height: 112px;
+    }
+}
+
+/* Add a subtle animation when calculator loads */
+.calculator {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
