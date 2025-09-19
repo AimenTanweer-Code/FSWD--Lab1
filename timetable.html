@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Timetable - FSWD Lab 1</title>
+    <link rel="stylesheet" href="styles/timetable.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-btn">← Back to Home</a>
+            <h1>Weekly Timetable</h1>
+            <p>Computer Science - Fall 2024</p>
+        </div>
+
+        <div class="timetable-container">
+            <div class="timetable-wrapper">
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th class="time-header">Time</th>
+                            <th class="day-header">Monday</th>
+                            <th class="day-header">Tuesday</th>
+                            <th class="day-header">Wednesday</th>
+                            <th class="day-header">Thursday</th>
+                            <th class="day-header">Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-slot">8:00 AM</td>
+                            <td class="class-slot empty"></td>
+                            <td class="class-slot math">
+                                <div class="class-info">
+                                    <div class="subject">Mathematics</div>
+                                    <div class="room">Room 101</div>
+                                    <div class="instructor">Dr. Smith</div>
+                                </div>
+                            </td>
+                            <td class="class-slot empty"></td>
+                            <td class="class-slot math">
+                                <div class="class-info">
+                                    <div class="subject">Mathematics</div>
+                                    <div class="room">Room 101</div>
+                                    <div class="instructor">Dr. Smith</div>
+                                </div>
+                            </td>
+                            <td class="class-slot empty"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="time-slot">9:00 AM</td>
+                            <td class="class-slot cs">
+                                <div class="class-info">
+                                    <div class="subject">Data Structures</div>
+                                    <div class="room">Lab 201</div>
+                                    <div class="instructor">Prof. Johnson</div>
+                                </div>
+                            </td>
+                            <td class="class-slot empty"></td>
+                            <td class="class-slot cs">
+                                <div class="class-info">
+                                    <div class="subject">Data Structures</div>
+                                    <div class="room">Lab 201</div>
+                                    <div class="instructor">Prof. Johnson</div>
+                                </div>
+                            </td>
+                            <td class="class-slot empty"></td>
+                            <td class="class-slot cs">
+                                <div class="class-info">
+                                    <div class="subject">Programming Lab</div>
+                                    <div class="room">Lab 301</div>
+                                    <div class="instructor">Prof. Johnson</div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="time-slot">10:00 AM</td>
+                            <td class="class-slot web">
+                                <div class="class-info">
+                                    <div class="subject">Web Development</div>
+                                    <div class="room">Room 205</div>
+                                    <div class="instructor">Ms. Davis</div>
+                                </div>
+                            </td>
+                            <td class="class-slot physics">
+                                <div class="class-info">
+                                    <div class="subject">Physics</div>
+                                    <div class="room">Room 102</div>
+                                    <div class="instructor">Dr. Wilson</div>
+                                </div>
+                            </td>
+                            <td class="class-slot web">
+                                <div class="class-info">
+                                    <div class="subject">Web Development</div>
+                                    <div class="room">Room 205</div>
+                                    <div class="instructor">Ms. Davis</div>
+                                </div>
+                            </td>
+                            <td class="class-slot physics">
+                                <div class="class-info">
+                                    <div class="subject">Physics</div>
+                                    <div class="room">Room 102</div>
+                                    <div class="instructor">Dr. Wilson</div>
+                                </div>
+                            </td>
+                            <td class="class-slot web">
+                                <div class="class-info">
+                                    <div class="subject">Web Dev Lab</div>
+                                    <div class="room">Lab 205</div>
+                                    <div class="instructor">Ms. Davis</div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="time-slot">11:00 AM</td>
+                            <td class="class-slot empty"></td>
+                            <td class="class-slot english">
+                                <div class="class-info">
+                                    <div class="subject">English</div>
+                                    <div class="room">Room 103</div>
+                                    <div class="instructor">Prof. Brown</div>
+                                </div>
+                            </td>
+                            <td class="class-slot break">Break</td>
+                            <td class="class-slot english">
+                                <div class="class-info">
+                                    <div class="subject">English</div>
+                                    <div class="room">Room 103</div>
+                                    <div class="instructor">Prof. Brown</div>
+                                </div>
+                            </td>
+                            <td class="class-slot break">Break</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="time-slot">12:00 PM</td>
+                            <td class="class-slot lunch" colspan="5">Lunch Break</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="time-slot">1:00 PM</td>
+                            <td class="class-slot database">
+                                <div class="class-info">
+                                    <div class="subject">Database Systems</div>
+                                    <div class="room">Lab 301</div>
+                                    <div class="instructor">Dr. Lee</div>
+                                </div>
+                            </td>
+                            <td class="class-slot database">
+                                <div class="class-info">
+                                    <div class="subject">Database Systems</div>
+                                    <div class="room">Lab 301</div>
+                                    <div class="instructor">Dr. Lee</div>
+                                </div>
+                            </td>
+                            <td class="class-slot empty"></td>
+                            <td class="class-slot database">
+                                <div class="class-info">
+                                    <div class="subject">DB Lab</div>
+                                    <div class="room">Lab 301</div>
+                                    <div class="instructor">Dr. Lee</div>
+                                </div>
+                            </td>
+                            <td class="class-slot empty"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="time-slot">2:00 PM</td>
+                            <td class="class-slot algorithms">
+                                <div class="class-info">
+                                    <div class="subject">Algorithms</div>
+                                    <div class="room">Room 204</div>
+                                    <div class="instructor">Prof. Garcia</div>
+                                </div>
+                            </td>
+                            <td class="class-slot empty"></td>
+                            <td class="class-slot algorithms">
+                                <div class="class-info">
+                                    <div class="subject">Algorithms</div>
+                                    <div class="room">Room 204</div>
+                                    <div class="instructor">Prof. Garcia</div>
+                                </div>
+                            </td>
+                            <td class="class-slot empty"></td>
+                            <td class="class-slot algorithms">
+                                <div class="class-info">
+                                    <div class="subject">Algorithm Lab</div>
+                                    <div class="room">Lab 204</div>
+                                    <div class="instructor">Prof. Garcia</div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="time-slot">3:00 PM</td>
+                            <td class="class-slot empty"></td>
+                            <td class="class-slot project">
+                                <div class="class-info">
+                                    <div class="subject">Project Work</div>
+                                    <div class="room">Lab 401</div>
+                                    <div class="instructor">Various</div>
+                                </div>
+                            </td>
+                            <td class="class-slot empty"></td>
+                            <td class="class-slot project">
+                                <div class="class-info">
+                                    <div class="subject">Project Work</div>
+                                    <div class="room">Lab 401</div>
+                                    <div class="instructor">Various</div>
+                                </div>
+                            </td>
+                            <td class="class-slot empty"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="time-slot">4:00 PM</td>
+                            <td class="class-slot study">Study Hall</td>
+                            <td class="class-slot study">Study Hall</td>
+                            <td class="class-slot study">Study Hall</td>
+                            <td class="class-slot study">Study Hall</td>
+                            <td class="class-slot study">Study Hall</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="legend">
+            <h3>Subject Legend</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-color math"></div>
+                    <span>Mathematics</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color cs"></div>
+                    <span>Computer Science</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color web"></div>
+                    <span>Web Development</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color physics"></div>
+                    <span>Physics</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color english"></div>
+                    <span>English</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color database"></div>
+                    <span>Database</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color algorithms"></div>
+                    <span>Algorithms</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color project"></div>
+                    <span>Project Work</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
